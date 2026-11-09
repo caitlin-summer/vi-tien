@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Ví của Cait</title>
+<title>Caitlin</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Caitlin">
-<meta name="theme-color" content="#08090d">
+<meta name="theme-color" content="#15171d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:   #08090d;
-  --l1:   #0e1018;
-  --l2:   #14161f;
-  --l3:   #1b1d27;
-  --l4:   #22242f;
-  --rim:  rgba(255,255,255,0.07);
-  --rim2: rgba(255,255,255,0.13);
-  --t0:   #edeae4;
-  --t1:   #94918d;
-  --t2:   #8f8c86;
-  --t3:   #6a6762;
-  --a:    #e2b96a;
-  --a2:   #f0cc85;
-  --g:    #48c78e;
-  --r:    #d96868;
-  --b:    #5b8fe8;
+  --bg:   #15171d;
+  --l1:   #1b1e26;
+  --l2:   #232731;
+  --l3:   #2d323e;
+  --l4:   #3a4050;
+  --rim:  rgba(255,255,255,0.09);
+  --rim2: rgba(255,255,255,0.16);
+  --t0:   #ebe7e0;
+  --t1:   #bab6ae;
+  --t2:   #9a98a1;
+  --t3:   #6b6e7a;
+  --a:    #d9b676;
+  --a2:   #e8c98f;
+  --g:    #7fc8a4;
+  --r:    #e69b95;
+  --b:    #86a9e6;
   --font: 'Be Vietnam Pro', sans-serif;
 }
 body.light {
@@ -73,7 +73,7 @@ body {
 nav {
   position:fixed; bottom:16px; left:50%; transform:translateX(-50%);
   width:calc(100% - 32px); max-width:398px; height:62px;
-  background:rgba(14,16,24,0.92);
+  background:rgba(30,33,42,0.94);
   border:1px solid var(--rim2);
   backdrop-filter:blur(32px) saturate(160%);
   border-radius:31px;
@@ -84,7 +84,7 @@ nav {
 .nb {
   flex:1; height:46px; border-radius:23px;
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
-  background:none; border:none; color:var(--t3);
+  background:none; border:none; color:var(--t2);
   cursor:pointer; font-family:var(--font);
   font-size:9.5px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
   transition:color .2s, background .2s;
@@ -198,6 +198,8 @@ nav {
 .dleg { display:flex; align-items:center; gap:8px; }
 .dleg-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
 .dleg-name { font-size:12px; font-weight:500; color:var(--t1); flex:1; }
+.dleg-name{line-height:1.2}.dleg-amt{display:block;font-size:11px;font-weight:600;color:var(--t2);margin-top:1px}
+.dleg{align-items:flex-start}.dleg-dot{margin-top:6px}
 .dleg-pct { font-size:12px; font-weight:700; color:var(--t0); }
 
 .wcard { margin:10px 22px 0; background:var(--l1); border:1px solid var(--rim); border-radius:20px; padding:20px 22px; }
@@ -228,7 +230,7 @@ nav {
 .catrow-name { font-size:13px; font-weight:600; color:var(--t0); margin-bottom:5px; }
 .catrow-track { height:2px; background:var(--l3); border-radius:1px; overflow:hidden; }
 .catrow-fill { height:100%; border-radius:1px; }
-.catrow-amt { font-size:13px; font-weight:700; flex-shrink:0; }
+.catrow-amt { font-size:13px; font-weight:700; flex-shrink:0; color:var(--t0); }
 
 .type-seg { margin:14px 22px 0; display:flex; background:var(--l1); border:1px solid var(--rim); border-radius:13px; padding:3px; }
 .type-btn { flex:1; height:36px; border-radius:10px; border:none; background:none; font-family:var(--font); font-size:13px; font-weight:600; color:var(--t2); cursor:pointer; transition:all .18s; letter-spacing:0.01em; }
@@ -245,7 +247,7 @@ nav {
 .flbl { font-size:10px; font-weight:600; color:var(--t2); letter-spacing:0.06em; text-transform:uppercase; }
 .finp { height:46px; padding:0 14px; background:var(--l1); border:1px solid var(--rim); border-radius:12px; color:var(--t0); font-family:var(--font); font-size:14px; font-weight:500; outline:none; transition:border-color .15s; -webkit-appearance:none; appearance:none; width:100%; }
 .finp:focus { border-color:rgba(226,185,106,0.4); }
-.finp option { background:#0e1018; }
+.finp option { background:var(--l2); color:var(--t0); }
 .finp-ta { height:auto; padding:12px 14px; }
 
 .cgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
@@ -356,28 +358,39 @@ body.desktop .screen, body.desktop nav { display:none !important; }
 .pin-clear-btn:active { opacity:.6; }
 
 /* ---- Gia đình: thêm nhanh + thẻ thống kê ---- */
-.quick{margin:14px 22px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.qbtn{min-height:56px;padding:8px 4px;border-radius:14px;background:var(--l1);border:1px solid var(--rim2);color:var(--t0);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:transform .12s,border-color .15s}
-.qbtn span{font-size:18px;line-height:1}
-.qbtn:active{transform:scale(.95);border-color:var(--a)}
 .fam-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--rim)}
 .fam-row:last-child{border-bottom:none;padding-bottom:0}
 .fam-ico{width:34px;height:34px;border-radius:10px;background:var(--l2);border:1px solid var(--rim);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .fam-lbl{flex:1;font-size:13px;font-weight:600;color:var(--t0)}
 .fam-amt{font-size:14px;font-weight:700}
 .fam-net{margin-top:4px;padding:10px 12px;border-radius:12px;background:var(--l2);display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;color:var(--t1)}
+/* ---- Giao diện tối dịu mắt ---- */
+body:not(.light) .cic{filter:saturate(.82) brightness(.95)}
+body:not(.light) #d-arcs,body:not(.light) .catrow-fill,body:not(.light) .dleg-dot{filter:saturate(.78)}
+body:not(.light) .flow-val,body:not(.light) .stats-flow-val{font-weight:600}
+body:not(.light) .sync-btn .cic,body:not(.light) .lock-logo .cic,body:not(.light) .ds-logo .cic,body:not(.light) .inl .cic{filter:none}
 /* ---- Icon SVG ---- */
 .cic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;display:block}
 body.light .cic{filter:brightness(.72) saturate(1.25)}
 .trow-ico .cic,.catrow-ico .cic,.fam-ico .cic{width:20px;height:20px}
 .cgbtn .ci .cic{width:24px;height:24px;margin:0 auto}.ecbtn .i .cic{width:22px;height:22px;margin:0 auto}
 .det-v .cic{display:inline-block;width:18px;height:18px;vertical-align:-4px;margin-right:6px}
-.qbtn span .cic{width:22px;height:22px}
 .sync-btn .cic{width:18px;height:18px;color:var(--t1)}
 body.light .sync-btn .cic{filter:none}
 .lock-logo,.ds-logo{display:flex;color:var(--a)}.lock-logo .cic,.ds-logo .cic{width:40px;height:40px;filter:none}
 .inl{display:inline-flex;vertical-align:-3px}.inl .cic{width:16px;height:16px;filter:none}
-.quick{grid-template-columns:repeat(6,1fr)}.q2{grid-column:span 2}.q3{grid-column:span 3}
+/* ---- Chi tiết danh mục ---- */
+.catrow,.fam-row{cursor:pointer}
+.catrow:active,.fam-row:active{background:var(--l2)}
+.catrow{padding:10px 8px;border-radius:12px}
+.dsvg text{font-family:var(--font)}
+.chev{width:16px;height:16px;fill:none;stroke:var(--t2);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-left:-6px}
+.cat-hd{display:flex;align-items:center;gap:12px}
+.cat-hd-ico{width:44px;height:44px;border-radius:12px;background:var(--l1);border:1px solid var(--rim);display:flex;align-items:center;justify-content:center}
+.cat-hd-name{font-size:18px;font-weight:700;letter-spacing:-0.02em}
+.cat-hd-sub{font-size:12px;color:var(--t2);font-weight:500;margin-top:1px}
+.cat-total{font-size:30px;font-weight:700;letter-spacing:-0.03em;margin:14px 0 8px}
+#ov-cat .sheet{padding-bottom:36px}
 /* ---- UX: cỡ chữ, vùng chạm, focus ---- */
 .cgbtn .cl{font-size:10.5px}.ecbtn .l{font-size:10px}.nb{font-size:10.5px}.chip-edit-hint{font-size:10px}
 .type-btn{height:44px}.seg-btn{height:40px}.mnav-btn{width:44px;height:44px}
@@ -558,13 +571,6 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
       <div class="pg-title">Giao dịch mới</div>
     </div>
   </div>
-  <div class="quick" role="group" aria-label="Thêm nhanh cho gia đình">
-    <button class="qbtn q2" onclick="quick('income','hubgive')"><span data-ic="hubgive"></span>Chồng cho</button>
-    <button class="qbtn q2" onclick="quick('expense','husband')"><span data-ic="husband"></span>Cho chồng</button>
-    <button class="qbtn q2" onclick="quick('expense','kid')"><span data-ic="kid"></span>Cho con</button>
-    <button class="qbtn q3" onclick="quick('expense','inlaw')"><span data-ic="inlaw"></span>Nhà nội</button>
-    <button class="qbtn q3" onclick="quick('expense','parents')"><span data-ic="parents"></span>Nhà ngoại</button>
-  </div>
   <div class="type-seg">
     <button class="type-btn exp on" id="btn-exp" onclick="setType('expense')">Chi tiêu</button>
     <button class="type-btn inc" id="btn-inc" onclick="setType('income')">Thu nhập</button>
@@ -635,6 +641,15 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
     Lịch sử
   </button>
 </nav>
+
+<!-- CATEGORY SHEET -->
+<div class="ov" id="ov-cat" onclick="closeOv('ov-cat',event)">
+  <div class="sheet">
+    <div class="sh-bar"></div>
+    <div id="cat-head"></div>
+    <div class="tlist" id="cat-list" style="padding:0"></div>
+  </div>
+</div>
 
 <!-- DETAIL SHEET -->
 <div class="ov" id="ov-det" onclick="closeOv('ov-det',event)">
@@ -790,7 +805,7 @@ function toast(msg,t='ok'){
 }
 
 function goTo(s){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById('s-'+s).classList.add('active');document.querySelectorAll('.nb[id]').forEach(b=>b.classList.remove('active'));const n=document.getElementById('n-'+s);if(n)n.classList.add('active');S.screen=s;if(s==='home')renderHome();if(s==='stats')renderStats();if(s==='history')renderHist();if(s==='add')setupAdd();window.scrollTo(0,0);}
-function refresh(){if(S.screen==='home')renderHome();else if(S.screen==='stats')renderStats();else if(S.screen==='history')renderHist();}
+function refresh(){if(document.getElementById('ov-cat').classList.contains('open'))renderCatSheet();if(S.screen==='home')renderHome();else if(S.screen==='stats')renderStats();else if(S.screen==='history')renderHist();}
 function closeOv(id,e){if(e.target===document.getElementById(id))document.getElementById(id).classList.remove('open');}
 function useg(id,p){document.querySelectorAll(`#${id} .seg-btn`).forEach(t=>t.classList.toggle('on',t.dataset.p===p));}
 
@@ -809,7 +824,7 @@ function renderHome(){
   const rec=[...f].sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id).slice(0,6);
   document.getElementById('home-list').innerHTML=rec.length?rec.map(rowH).join(''):`<div class="empty"><div class="empty-ico">—</div><p>Chưa có giao dịch nào.<br>Nhấn + để thêm mới.</p></div>`;
 }
-function rowH(t){const c=gc(t.type,t.cat);const neg=t.type==='expense';return`<div class="trow" onclick="openTxn(${t.id})"><div class="trow-ico">${c.icon}</div><div class="trow-body"><div class="trow-name">${esc(t.note||c.lbl)}</div><div class="trow-meta"><span class="trow-date">${t.date}</span><span class="trow-sep"></span><span class="trow-tag">${t.wallet==='cash'?'Tiền mặt':'Tài khoản'}</span></div></div><div class="trow-amt ${neg?'neg':'pos'}">${neg?'−':'+'}₫${fmt(t.amount)}</div></div>`;}
+function rowH(t,full){const c=gc(t.type,t.cat);const neg=t.type==='expense';return`<div class="trow" onclick="openTxn(${t.id})"><div class="trow-ico">${c.icon}</div><div class="trow-body"><div class="trow-name">${esc(t.note||c.lbl)}</div><div class="trow-meta"><span class="trow-date">${t.date}</span><span class="trow-sep"></span><span class="trow-tag">${t.wallet==='cash'?'Tiền mặt':'Tài khoản'}</span></div></div><div class="trow-amt ${neg?'neg':'pos'}">${neg?'−':'+'}₫${full?fF(t.amount):fmt(t.amount)}</div></div>`;}
 
 function setStatsPeriod(p){
   S.sp=p;
@@ -834,6 +849,16 @@ function changeMonth(d){
   renderStats();
 }
 function fpMonth(a,ym){return a.filter(x=>x.date.startsWith(ym));}
+function statsTx(){return S.sp==='month'?fpMonth(S.txns,S.statsMonth):fp(S.txns,S.sp);}
+function periodLbl(){if(S.sp==='month'){const[y,m]=S.statsMonth.split('-');return`Tháng ${+m}/${y}`;}return{day:'Hôm nay',week:'Tuần này'}[S.sp];}
+function openCat(type,id){S.catView={type,id};renderCatSheet();document.getElementById('ov-cat').classList.add('open');}
+function renderCatSheet(){
+  const v=S.catView;if(!v)return;const c=gc(v.type,v.id);
+  const tx=statsTx().filter(t=>t.type===v.type&&t.cat===v.id).sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id);
+  const tot=tx.reduce((x,t)=>x+t.amount,0),col=v.type==='income'?'var(--g)':'var(--r)';
+  document.getElementById('cat-head').innerHTML=`<div class="cat-hd"><div class="cat-hd-ico">${c.icon}</div><div><div class="cat-hd-name">${c.lbl}</div><div class="cat-hd-sub">${periodLbl()} · ${tx.length} khoản</div></div></div><div class="cat-total" style="color:${col}">${v.type==='income'?'+':'−'}₫${fF(tot)}</div>`;
+  document.getElementById('cat-list').innerHTML=tx.length?tx.map(t=>rowH(t,true)).join(''):`<div class="empty"><p>Chưa có khoản nào trong kỳ này.</p></div>`;
+}
 function renderStats(){
   const isMonth=S.sp==='month';
   const tx=isMonth?fpMonth(S.txns,S.statsMonth):fp(S.txns,S.sp);
@@ -845,22 +870,21 @@ function renderStats(){
   const ents=Object.entries(cm).sort((a,b)=>b[1]-a[1]).slice(0,5);
   document.getElementById('d-total').textContent='₫'+fmt(totE);
   if(!ents.length){document.getElementById('d-arcs').innerHTML='';document.getElementById('d-legs').innerHTML='<div style="font-size:11px;color:var(--t2);font-weight:500">Chưa có dữ liệu</div>';}
-  else{const r=37,cx=52,cy=52,ci=2*Math.PI*r;let off=0,arcs='',legs='';ents.forEach(([id,amt])=>{const c=gc('expense',id),pct=amt/totE,d=pct*ci,g=ci-d;arcs+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${c.color}" stroke-width="13" stroke-dasharray="${d} ${g}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})" stroke-linecap="round"/>`;off+=d;legs+=`<div class="dleg"><div class="dleg-dot" style="background:${c.color}"></div><div class="dleg-name">${c.lbl}</div><div class="dleg-pct">${Math.round(pct*100)}%</div></div>`;});document.getElementById('d-arcs').innerHTML=arcs;document.getElementById('d-legs').innerHTML=legs;}
+  else{const r=37,cx=52,cy=52,ci=2*Math.PI*r;let off=0,arcs='',legs='';ents.forEach(([id,amt])=>{const c=gc('expense',id),pct=amt/totE,d=pct*ci,g=ci-d;arcs+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${c.color}" stroke-width="13" stroke-dasharray="${d} ${g}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})" stroke-linecap="round"/>`;off+=d;legs+=`<div class="dleg"><div class="dleg-dot" style="background:${c.color}"></div><div class="dleg-name">${c.lbl}<span class="dleg-amt">₫${fF(amt)}</span></div><div class="dleg-pct">${Math.round(pct*100)}%</div></div>`;});document.getElementById('d-arcs').innerHTML=arcs;document.getElementById('d-legs').innerHTML=legs;}
   const cE=exps.filter(t=>t.wallet==='cash').reduce((s,t)=>s+t.amount,0),bE=exps.filter(t=>t.wallet==='bank').reduce((s,t)=>s+t.amount,0),mx=Math.max(cE,bE,1);
   document.getElementById('wc-body').innerHTML=`<div class="wi"><div class="wi-row"><span class="k">Tiền mặt</span><span class="v">₫${fmt(cE)}</span></div><div class="wi-track"><div class="wi-fill" style="width:${cE/mx*100}%;background:var(--a)"></div></div></div><div class="wi"><div class="wi-row"><span class="k">Tài khoản</span><span class="v">₫${fmt(bE)}</span></div><div class="wi-track"><div class="wi-fill" style="width:${bE/mx*100}%;background:var(--b)"></div></div></div>`;
   const sumCat=(arr,id)=>arr.filter(t=>t.cat===id).reduce((x,t)=>x+t.amount,0);
   const hGive=sumCat(incs,'hubgive'),hSpend=sumCat(exps,'husband'),kSpend=sumCat(exps,'kid'),nSpend=sumCat(exps,'inlaw'),pSpend=sumCat(exps,'parents'),net=hGive-hSpend;
-  const fr=(ico,lbl,txt,col)=>`<div class="fam-row"><div class="fam-ico">${ico}</div><div class="fam-lbl">${lbl}</div><div class="fam-amt" style="color:${col}">${txt}</div></div>`;
+  const fr=(ico,lbl,txt,col,ty,id)=>`<div class="fam-row" role="button" tabindex="0" onclick="openCat('${ty}','${id}')" onkeydown="if(event.key==='Enter')openCat('${ty}','${id}')"><div class="fam-ico">${ico}</div><div class="fam-lbl">${lbl}</div><div class="fam-amt" style="color:${col}">${txt}</div></div>`;
   const out=(v)=>(v?'−':'')+'₫'+fmt(v);
-  document.getElementById('fam-body').innerHTML=fr(gc('income','hubgive').icon,'Chồng cho',(hGive?'+':'')+'₫'+fmt(hGive),'var(--g)')+fr(gc('expense','husband').icon,'Chi cho chồng',out(hSpend),'var(--r)')+fr(gc('expense','kid').icon,'Chi cho con',out(kSpend),'var(--r)')+fr(gc('expense','inlaw').icon,'Chi nhà nội',out(nSpend),'var(--r)')+fr(gc('expense','parents').icon,'Chi nhà ngoại',out(pSpend),'var(--r)')+`<div class="fam-net"><span>Chồng cho − chi cho chồng</span><span style="color:${net>=0?'var(--g)':'var(--r)'};font-weight:700">${net>=0?'+':'−'}₫${fmt(Math.abs(net))}</span></div>`;
-  const sc=document.getElementById('stats-cats');if(!ents.length){sc.innerHTML=`<div class="empty" style="padding:24px"><div class="empty-ico">—</div><p>Chưa có dữ liệu</p></div>`;return;}const mx2=ents[0][1];sc.innerHTML=ents.map(([id,amt])=>{const c=gc('expense',id);return`<div class="catrow"><div class="catrow-ico">${c.icon}</div><div class="catrow-body"><div class="catrow-name">${c.lbl}</div><div class="catrow-track"><div class="catrow-fill" style="width:${amt/mx2*100}%;background:${c.color}"></div></div></div><div class="catrow-amt" style="color:${c.color}">₫${fmt(amt)}</div></div>`;}).join('');
+  document.getElementById('fam-body').innerHTML=fr(gc('income','hubgive').icon,'Chồng cho',(hGive?'+':'')+'₫'+fmt(hGive),'var(--g)','income','hubgive')+fr(gc('expense','husband').icon,'Chi cho chồng',out(hSpend),'var(--r)','expense','husband')+fr(gc('expense','kid').icon,'Chi cho con',out(kSpend),'var(--r)','expense','kid')+fr(gc('expense','inlaw').icon,'Chi nhà nội',out(nSpend),'var(--r)','expense','inlaw')+fr(gc('expense','parents').icon,'Chi nhà ngoại',out(pSpend),'var(--r)','expense','parents')+`<div class="fam-net"><span>Chồng cho − chi cho chồng</span><span style="color:${net>=0?'var(--g)':'var(--r)'};font-weight:700">${net>=0?'+':'−'}₫${fmt(Math.abs(net))}</span></div>`;
+  const sc=document.getElementById('stats-cats');if(!ents.length){sc.innerHTML=`<div class="empty" style="padding:24px"><div class="empty-ico">—</div><p>Chưa có dữ liệu</p></div>`;return;}const mx2=ents[0][1];sc.innerHTML=ents.map(([id,amt])=>{const c=gc('expense',id);return`<div class="catrow" role="button" tabindex="0" onclick="openCat('expense','${id}')" onkeydown="if(event.key==='Enter')openCat('expense','${id}')"><div class="catrow-ico">${c.icon}</div><div class="catrow-body"><div class="catrow-name">${c.lbl}</div><div class="catrow-track"><div class="catrow-fill" style="width:${amt/mx2*100}%;background:${c.color}"></div></div></div><div class="catrow-amt">₫${fmt(amt)}</div><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></div>`;}).join('');
 }
 
 function setupAdd(){document.getElementById('a-date').value=today();document.getElementById('a-amt').value='';document.getElementById('a-note').value='';document.getElementById('a-wallet').value='cash';S.type='expense';S.cat=null;document.getElementById('btn-exp').classList.add('on');document.getElementById('btn-inc').classList.remove('on');renderAddCats();}
 function setType(t){S.type=t;S.cat=null;document.getElementById('btn-exp').classList.toggle('on',t==='expense');document.getElementById('btn-inc').classList.toggle('on',t==='income');renderAddCats();}
 function renderAddCats(){const cats=S.type==='expense'?CE:CI;document.getElementById('a-cats').innerHTML=cats.map(c=>`<button class="cgbtn${S.cat===c.id?' on':''}" onclick="pickCat('${c.id}')"><div class="ci">${c.icon}</div><div class="cl">${c.lbl}</div></button>`).join('');}
 function pickCat(id){S.cat=id;renderAddCats();}
-function quick(type,cat){setType(type);pickCat(cat);const a=document.getElementById('a-amt');if(a)a.focus();}
 function addTxn(){const amt=raw('a-amt');if(!amt){toast('Nhập số tiền trước','warn');return;}if(!S.cat){toast('Chọn danh mục','warn');return;}const t={id:Date.now(),type:S.type,amount:amt,wallet:document.getElementById('a-wallet').value,cat:S.cat,note:document.getElementById('a-note').value.trim(),date:document.getElementById('a-date').value||today()};S.txns.unshift(t);save();toast('Đã thêm giao dịch');setTimeout(()=>goTo('home'),400);}
 
 function setHistP(p){S.hp=p;useg('hsseg',p);renderHist();}
